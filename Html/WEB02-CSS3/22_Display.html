@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        .box{background-color: yellow; width: 300px; height: 100px; margin: 10px; border: 1px solid black;}
+        #box1{display: block;}
+        /* display:block 원래 div가 block 이므로 변화 없음. */
+
+        #box2{display:inline;}
+        /* inline 형식의 의미: 줄바꿈 속성이 없어서 한줄에 이어서 나열. width, height 값도 적용할 수 없음. */
+
+        #box3{display:inline-block;}
+        /*  inline 에서 width,height만 살려내어 표시. 여전히 줄바꿈 없음. */
+
+        #box4{display: none;}
+        /* 화면에서 사라짐. 자리도 없어짐. */
+
+    </style>
+</head>
+<body>
+    <span>Dummy</span>
+    <div id="box4" class="box">
+        <span>국회는 정부의 동의없이 정부가 제출한 지출예산 각항의 금액을 증가하거나 새 비목을 </span>
+    </div>
+    <span>Dummy</span>
+    <br/><br/>
+
+
+    <span>Dummy</span>
+    <div id="box3" class="box">
+        <span>국회는 정부의 동의없이 정부가 제출한 지출예산 각항의 금액을 증가하거나 새 비목을 </span>
+    </div>
+    <span>Dummy</span>
+    <br/><br/>
+
+
+    <span>Dummy</span>
+    <div id="box2" class="box">
+        <span>국회는 정부의 동의없이 정부가 제출한 지출예산 각항의 금액을 증가하거나 새 비목을 </span>
+    </div>
+    <span>Dummy</span>
+    <br/><br/>
+
+
+    <span>Dummy</span>
+    <div id="box1" class="box">
+        <span>국회는 정부의 동의없이 정부가 제출한 지출예산 각항의 금액을 증가하거나 새 비목을 </span>
+    </div>
+    <span>Dummy</span>
+    <br/><br/>
+    
+</body>
+</html>

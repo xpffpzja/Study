@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        body{display: flex; justify-content: center;}
+        img{width:600px; height:400px;}
+        .view{position: relative; width: 600px; height: 400px; border: 5px solid blue; overflow: hidden;}
+        .imgs{position: absolute; width: 4800px; height: 400px; border: 1px solid red; left:0; top: 0; transition:0.3s;}
+        
+        #remote{position:absolute; width: 400px; height: 50px; border: 1px solid white; bottom:0; left: 100px; display: flex; justify-content: center; align-items: center;}
+        .a{position: relative; width: 30px; height: 30px; border: 1px solid black; background: white; float: left;margin-left: auto; border-radius: 50%; text-align: center;}
+        
+    </style>
+        
+    <script type="text/javaScript">
+        var state = false; // 현재 자동 플레이중인지를 저장
+        var num = 0; 
+        var timer;
+        function start_stop(){
+            if(state == true){
+                // 버튼 표시글자를 '▶'로 변경
+                document.getElementById("btn").innerHTML = '▶';
+
+                // interval 멈춤
+                window.clearInterval(timer);
+                // state를 false로 변경
+                state = false;
+
+            }else{
+                // 버튼 표시글자를 '■' 로 변경
+                document.getElementById("btn").innerHTML = '■';
+
+                // interval 재실행
+                timer = window.setInterval(function ( ) {
+                    num++
+                    if(num > 7) num = 0;
+                    var dist = -600 * num;
+                    document.getElementById("imgs").style.left = dist + 'px';
+                        
+                }, 1500);
+                // state를 true로 변경
+                state = true;
+            }
+        }
+
+        function moveleft() {
+            if(num == 0 ) return; //이미 맨 왼쪽 이미지를 보고있다면 함수 실행 종료
+            num--
+            var dist = 600 * num * (-1);
+            document.getElementById("imgs").style.left = dist + 'px'; 
+        }
+            
+        
+        function moveright(){
+            if( num == 7) return; // 이미 맨 오른쪽 이미지를 보고있다면 함수 실행 종료
+            num++;
+            var dist = 600*num*(-1);
+            document.getElementById("imgs").style.left = dist + 'px';
+        }
+
+        function move( a ) {
+            var dist = a * 600 * -1;
+            document.getElementById("imgs").style.left=dist + "px";
+            // 전체 리모콘 버튼을 흰색으로, 전달된 번째 버튼을 검은색으로 변경
+            for(var i=0; i<=7; i++){
+                document.getElementById("btn" + i).style.background = 'white';
+            }
+            document.getElementById("btn"+ a).style.background = 'black';
+        }
+    </script>
+</head>
+<body onload="start_stop();"  >
+    <div class="view">
+        <div class="imgs" id="imgs">
+            <img src="images/Koala.jpg"/><img src="images/Chrysanthemum.jpg"/><img src="images/Desert.jpg"/><img src="images/Hydrangeas.jpg"/><img src="images/Jellyfish.jpg"/><img src="images/Lighthouse.jpg"/><img src="images/Penguins.jpg"/><img src="images/Tulips.jpg"/>
+        </div>
+        <div id="remote">
+            <div class="a"  onclick="moveleft()">◁</div>
+            <div class="a" id="btn0" onclick="move(0)">1</div>
+            <div class="a" id="btn1" onclick="move(1)">2</div>
+            <div class="a" id="btn2" onclick="move(2)">3</div>
+            <div class="a" id="btn3" onclick="move(3)">4</div>
+            <div class="a" id="btn4" onclick="move(4)">5</div>
+            <div class="a" id="btn5" onclick="move(5)">6</div>
+            <div class="a" id="btn6" onclick="move(6)">7</div>
+            <div class="a" id="btn7" onclick="move(7)">8</div>
+            <div class="a" onclick="moveright()">▷</div>
+            <div class="a"  id="btn" onclick="start_stop()">▶</div>
+        </div>
+    </div>
+    
+</body>
+</html>

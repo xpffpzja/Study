@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+#container { display:flex; justify-content:space-between;}
+
+#view{background-color:white; border-radius:5%; width:200px; height:80px; text-align:center; line-height:75px;}
+#view a{color:black; font-weight:bold; font-size:150%; text-decoration-line:none; }
+
+#link{display:flex; margin:50px;}
+
+
+.linkicon {background-color:white; color:black; text-align:center; font-weight:bold;}

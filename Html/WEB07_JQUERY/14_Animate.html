@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+
+        div{float:left;  width: 50px; height:50px; margin: 3px; background-color: orange; position: relative;}
+
+
+
+
+    </style>
+    <script src="script/jquery-3.7.1.min.js"></script>
+    <script type="text/javaScript">
+        $(function(){
+            $('div').mouseover(function(){
+                $(this).animate({top:500}, 1000);
+
+            });
+            $('div').mouseout(function(){
+                $(this).animate({top:0}, 1000);
+
+            });
+
+            // 위와 동일
+            // $('div').hover(
+            //     function(){ $(this).animate({top:500}, 1000);}
+            //     function(){ $(this).animate({top:0}, 1000);}
+            // });
+            
+            //$(this).css('top', '500px'); -> 자체적 transition-duration 없음.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        });
+    </script>
+</head>
+<body>
+    <div ></div>
+    <div ></div>
+    <div ></div>
+    <div ></div>
+    <div ></div>
+    <div ></div>
+    
+</body>
+</html>

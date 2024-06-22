@@ -1,0 +1,25 @@
+@charset "UTF-8";
+body {background-color:black; }
+
+header {display:flex;  width:100%;  height: 50px;  border:1px dotted blue; align-items:center; justify-content:space-between;}
+
+#rightlink{display:flex;  align-items:center; margin-left:55px;}
+
+#logo {display:flex;}
+#Category {display:flex;}
+
+#logo a{font-weight:bold; font-size:300%;  color:red; text-decoration-line:none; }
+#Category a { font-weight: bold ; font-size:200%; color:white; text-decoration-line:none;}
+
+
+
+#search { display:flex; margin-right:55px;}
+#search input {line-height: 30px;}
+#search a img{padding: 0px; line-height: 65px; background-color: white;}
+
+#dbg {background-color:white; display:flex;}
+
+
+.mypage { border:1px solid white; background-color:white; display:flex; }
+
+.profileclick {display:none; color:white; background-color:skyblue;}

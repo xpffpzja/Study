@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="car" class="com.himedia.sp03.toy.ElectronicCar"></bean>
+
+    <bean id="nBattery" class="com.himedia.sp03.battery.NormalBattery"></bean>
+    <bean id="cBattery" class="com.himedia.sp03.battery.ChargeBattery"></bean>
+
+    <bean id="robot" class="com.himedia.sp03.toy.ElectronicRobot">
+        <constructor-arg ref="cBattery"></constructor-arg>
+
+    </bean>
+    <!-- 스프링컨테이너에서 객체가 완성되기 위해 다른 객체의 전달을 요구하고 있는 상태 : 의존 -->
+    <!-- 그 의존을 위해 객체가 제공되는 동작 : 의존 주입 --><!-- 객체 조립 -->
+</beans>

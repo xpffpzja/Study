@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script/jquery-3.7.1.min.js"></script>
+    <script src="script/jquery.innerfade.js"></script>
+    <style type="text/css">
+        body{display: flex; justify-content: center; }
+         .container{ display: flex; flex-direction: column; width:1080px; height:480px; }
+        
+        #tabs{ width:1080px; height:40px; display: flex; }
+        #tabs div { width:180px; height:40px; box-sizing: border-box; border-radius: 5px 5px 0 0; font-size:120%; 
+            cursor:pointer; display: flex; justify-content: center; align-items: center;/* border:1px dashed black; */}
+        
+        #content{position: relative; margin:0 auto; width:1080px; height:440px;}
+        .contents{ position:absolute; width:1080px; height:440px; left:0px; top:0px; line-height: 440px; text-align: center; font-size: 120%;}
+        
+
+
+
+        
+    </style>
+    <script type="text/javaScript">
+        $(function(){
+            $('#tabs div:eq(0)').css('background', 'red',);
+            $('#tabs div:eq(1)').css('background', 'orange');
+            $('#tabs div:eq(2)').css('background', 'yellow');
+            $('#tabs div:eq(3)').css('background', 'green');
+            $('#tabs div:eq(4)').css('background', 'blue');
+            $('#tabs div:eq(5)').css('background', 'purple');
+            // content 들에 배경색을 탭메뉴와 맞추기.
+            // 메뉴를 클릭하면 해당 화면이 화면에 보이게 코딩.
+            
+            
+        //     $("#num1").click(function(){
+               
+        //         $("#content1").fadeIn(100,function(){});
+                
+        
+        //     });
+        // });
+        $(function(){
+            $('#tabs div').click(function() {
+                var idx = $(this).index();
+                var selectDiv = '#content' + (idx+1)
+                $('.contents').hide();
+                $(selectDiv).show();
+                
+            });
+
+
+
+
+
+        });
+
+
+    });
+
+
+
+
+
+      
+        
+    </script>
+</head>
+<body>
+<div class="container">
+    <div id="tabs">
+        <div id="num1">Menu A</div>
+        <div id="num2">Menu B</div>
+        <div id="num3">Menu C</div>
+        <div id="num4">Menu D</div>
+        <div id="num5">Menu E</div>
+        <div id="num6">Menu F</div>
+    </div>
+    <div id="content">
+        <div class="contents" id="content1" style="background-color: red;">Content A</div>
+        <div class="contents" id="content2" style="background-color: orange;">Content B</div>
+        <div class="contents" id="content3" style="background-color: yellow;">Content C</div>
+        <div class="contents" id="content4" style="background-color: green;">Content D</div>
+        <div class="contents" id="content5" style="background-color: blue;">Content E</div>
+        <div class="contents" id="content6" style="background-color: purple;">Content F</div>
+    </div>
+</div>
+</body>
+</html>

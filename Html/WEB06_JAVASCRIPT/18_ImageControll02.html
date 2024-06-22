@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javaScript">
+        function changeImg(){
+           var number = prompt("숫자를 입력해주세요.");
+           document.getElementById("target").src = "images/" + num + ".jpg";
+           
+
+           // var filename = "image/" + number + ".jpg";
+           // document.getElementById("target").src = filename;
+
+            
+        }
+
+
+    </script>
+</head>
+<body>
+    <img src="images/1.jpg" id="target" onClick="changeImg()">
+    
+</body>
+</html>
