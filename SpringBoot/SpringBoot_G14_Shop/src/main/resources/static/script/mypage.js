@@ -114,6 +114,32 @@ function withdrawal(){
 	}
 }
 
+function qnaViewWithPass(pass, qseq	){
+	var inputPass = prompt("비밀글 입니다. 암호를 입력하세요.");
+	if(pass == inputPass){
+		location.href="qnaView?qseq="+ qseq ;
+	}else{
+		alert("암호가 일치하지 않습니다.");
+	}
+
+}
+
+function  qnaView(qseq){
+	location.href="qnaView?qseq="+ qseq;
+
+}
+
+function enable(){
+	if(document.formm.secret.checked == true){
+		document.formm.pass.disabled = false;
+		}else{
+		document.formm.pass.disabled = true;
+		document.formm.pass.value ="";
+	}
+}
+
+
+
 
 
 

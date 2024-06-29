@@ -17,7 +17,7 @@
         select * from cart_view where cseq = #{param1}
     </select>
 
-    <insert id="insertOrderDetail">
+    <insert id="insertOrderDetail" >
         insert into order_detail( oseq, pseq, quantity)
         values ( #{param1}, #{param2.pseq}, #{param2.quantity})
     </insert>
