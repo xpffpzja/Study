@@ -88,14 +88,6 @@ var object = {
 object.method();
 object.func();
 
-for(var key in object){
-    console.log(`${key} : ${object[key]}`);
-   
-}
-console.log(object);
-
-
-
 console.log('------------------------------------------------------------------------------------');
 
 //멤버함수에 매개변수가 존재할수 있음.
@@ -146,7 +138,7 @@ var std4 = new Student('홍길동서남북', 100, 100, 100, 100);
 console.log(std4);
 
 std1.music = 100; // std1 객체에만 music 멤버가 추가됨.
-console.log(std1);
+
 // 7. 프로토타입
 // - 생성자 함수를 사용해 생성된 객체가 공통으로 가지는 공간.
 // - 자바스크립트의 모든 생성자 함수는 내부의 this 변수들의 prototype을 가짐.

@@ -74,7 +74,7 @@ const abc5 = x => { return 100;}
 
 
 // 함수의 표현 방법 #2
-// 함수의 내용이 리턴만 있는 경우
+// 함수의 내용이 리턴만 이쓴 경우
 // const add = (x, y) => {return x+y};
 const add6 = (x, y) => x+y;
 const add7 = (x, y) => (x+y);

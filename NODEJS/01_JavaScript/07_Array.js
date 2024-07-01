@@ -30,7 +30,7 @@ console.log("#2------------------------------------------");
 const arr = [ 'a', 'b', 'c'];
 
 for(var k in arr){
-    console.log(`key : ${k}, \t arr[${k}] : ${arr[k]}`);
+    console.log(`key : ${k}, \tarr[${k}] : ${arr[k]}`);
 }
 // k는 배열의 index가 차례로 하나씩 저장되면서 반복실행히 실행됨.
 
@@ -39,10 +39,10 @@ console.log("#3------------------------------------------");
 // 배열의 내용을 볼 수 있는 방법 #3
 // arr.map(); // ()안에 익명함수를 하나 넣을껀데 그 익명함수를 배열의 요소들을 대상으로 한번씩 실행.
 // arr.map(function(){}); // 익명함수가 배열의 요소갯수만큼 여러번 실행. (반복실행문처럼)
-arr.map(function(value, idx){
+arr.map(function(value, index ){
     // value : 벼열의 요소들이 한번씩 저장될 변수
     // idx : 그 요소들의 첨자
-    console.log(`index:${idx}, value:${value}`);
+    console.log(`index:${index}, value:${value}`);
 });
 console.log("map 명령 종료");
 

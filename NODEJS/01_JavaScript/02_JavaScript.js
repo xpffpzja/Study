@@ -1,4 +1,4 @@
-// node 02_JavaScript.js
+// node 02_JSBasic.js
 
 var a = "Hello World & Node.js";
 console.log(a);
