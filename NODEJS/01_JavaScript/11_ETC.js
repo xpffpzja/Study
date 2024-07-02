@@ -33,7 +33,7 @@ console.log("--------------------------------------------------");
 
 // 배열과 객체의 구조 분해
 
-// // 배열의 구조 분해
+// // 배읠의 구조 분해
 // let arr = [];
 // arr.push("abcd");
 // arr.push("1234");
@@ -56,7 +56,7 @@ console.log("--------------------------------------------------");
 // //[zero, , ,three] = arr7;
 
 
-// // 배열의 요소 갯수보다 할당받을 변수의 갯수가 많다면 반수값은 undefine가 됨.
+// // 배열의 요소 갯수보다 할당받을 변수의 갯수가 많다면 반수값은 undefine가 디됨.
 // [zero, one, two, three, four, five] = arr7;
 // console.log(zero, one, two, three, four, five);
 
@@ -83,8 +83,8 @@ console.log(a1, a2);
 let three, four;
 let obj1 = {three:3, four:4};
 // {three, four} obj1  //에러: 이미 생성된 변수로 구조분해하는 경우.
-({three, four} = obj1); //객체를 변도의 변수에 저장 하는 연산으로는'='이 쓰이는것이 아니라 구조분해하는것으로
-//인식하게 하기위해 ()를 사용.
+({three, four} = obj1); //객체를 변도의 변수에 저장 하는 연산으노'='이 쓰이는것이 아니라 구조분해하는것으로
+//인식하게 하기윟 ()를 사용.
 console.log(three, four);
 
 console.log("--------------------------------------------------");
@@ -228,7 +228,7 @@ console.log();
 
 // node 11_ETC.js
 
-
+//
 
 
 

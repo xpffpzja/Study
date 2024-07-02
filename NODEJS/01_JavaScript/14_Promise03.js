@@ -2,7 +2,7 @@
 
 //동기실행과 비동기실행 비교
 
-//동기실행
+// //동기실행
 // console.log('==작업시작==');
 // console.log('작업1 시작');
 // // 현재시간을 얻어서 3초를 더한 시간 계산
@@ -35,7 +35,7 @@
 // Promise로 비동기 실행
 let pm = new Promise((resolve, reject)=>{
     console.log('==작업 시작==');
-    resolve(); // 비동기 실행할 내용의 호출(준비완료 상태).
+    resolve(); // 비동기 실행할 내용의 호출.
     console.log('작업2 시작');
     console.log('작업2 종료');
     console.log('==모든 작업 종료==');

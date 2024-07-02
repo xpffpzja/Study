@@ -8,29 +8,26 @@ const kors = [98, 78, 56, 89];
 const mats = [89, 57, 48, 69];
 const engs = [88, 99, 69, 78];
 
-
-for( let i=0; i<4; i++){
- console.log(`student { name: ${names[i]}, kor: ${kors[i]}, math: ${mats[i]}, eng: ${engs[i]} }`);
-}
-
-const students =[];
+const students = [];
 // 위 배열에 생성자로 생성된 학생객체를 요소로 추가하세요.(반복문 이용)
 
-function student( name, korean, math, english ){
-    this.name = name;
-    this.kor = korean;
-    this.math = math;
-    this.eng = english;
+function student(names, kors, mats, engs){
+    this.names = names;
+    this.kors = kors;
+    this.mats = mats;
+    this.engs = engs;
 }
 
-for( let i=0; i<names.length; i++){
+for(let i =0; i<names.length; i++){
     const std = new student(names[i], kors[i], mats[i], engs[i]);
     students.push(std);
 }
 
-for( std of students ){
+for( std of students){
     console.log(std);
-}    
+}
+
+
 // 배열에 요소를 추가하는 명령 :  students.push(std);
 
 // [ {name:'홍길동', kor:98, math:89, eng:88} , { }, { }, { }]
